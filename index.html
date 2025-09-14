@@ -310,7 +310,7 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -322,6 +322,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
             backdrop-filter: blur(20px);
+            position: relative;
         }
 
         .project-card:hover {
@@ -338,6 +339,20 @@
             justify-content: center;
             font-size: 3rem;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image.sn-corp {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .project-image.blinkit {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .project-image.zomato {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
         }
 
         .project-content {
@@ -370,6 +385,21 @@
             background: rgba(102, 126, 234, 0.2);
             color: #667eea;
             border-radius: 15px;
+        }
+
+        .project-tag.excel {
+            background: rgba(28, 177, 66, 0.2);
+            color: #1cb142;
+        }
+
+        .project-tag.powerbi {
+            background: rgba(244, 181, 31, 0.2);
+            color: #f4b51f;
+        }
+
+        .project-tag.sql {
+            background: rgba(255, 87, 51, 0.2);
+            color: #ff5733;
         }
 
         .project-links {
@@ -706,7 +736,7 @@
                 </div>
                 <div class="about-text">
                     <p>Hello! I'm Yash Jain, a results-driven B.Tech Computer Science Engineering student with a passion for data analytics, machine learning, and web development. I specialize in transforming complex data into actionable insights that drive business growth.</p>
-                    <p>With expertise in Power BI, Python, SQL, and PHP, I've demonstrated the ability to deliver impactful projects including interactive dashboards, predictive models, and autonomous systems. My work has proven to improve business performance by 15%+ through data-driven insights.</p>
+                    <p>With expertise in Power BI, Excel, SQL, Python, and PHP, I've demonstrated the ability to deliver impactful projects including interactive dashboards for corporate sales, e-commerce analytics, and food delivery insights. My work has proven to improve business performance by 15%+ through data-driven insights.</p>
                     <p>Currently pursuing my degree at Indus University, Ahmedabad, I'm constantly learning and exploring new technologies to stay at the forefront of the rapidly evolving tech landscape.</p>
                 </div>
             </div>
@@ -716,7 +746,7 @@
                     <div class="stat-label">Performance Improvement</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">3+</div>
+                    <div class="stat-number">5+</div>
                     <div class="stat-label">Major Projects</div>
                 </div>
                 <div class="stat-item">
@@ -738,13 +768,13 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">📊</div>
-                    <h3>Data Analytics</h3>
-                    <p>Power BI, Excel, Data Visualization, Statistical Analysis, Business Intelligence</p>
+                    <h3>Data Analytics & Visualization</h3>
+                    <p>Power BI, Excel, Advanced Charts, Interactive Dashboards, Statistical Analysis, Business Intelligence</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🐍</div>
                     <h3>Programming</h3>
-                    <p>Python, PHP, SQL, JavaScript, Data Structures & Algorithms</p>
+                    <p>Python, PHP, JavaScript, Data Structures & Algorithms, Object-Oriented Programming</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🤖</div>
@@ -754,7 +784,7 @@
                 <div class="skill-card">
                     <div class="skill-icon">💾</div>
                     <h3>Database Management</h3>
-                    <p>SQL, Database Design, Query Optimization, Data Integration</p>
+                    <p>SQL, Database Design, Query Optimization, Data Integration, ETL Processes</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🌐</div>
@@ -773,20 +803,58 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Featured Dashboard Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">📊</div>
+                    <div class="project-image sn-corp">📈</div>
                     <div class="project-content">
-                        <h3>Power BI Sales Performance Dashboard</h3>
-                        <p>Developed an interactive Power BI dashboard analyzing sales performance across multiple regions with comprehensive data visualization capabilities. Integrated advanced features including interactive maps, dynamic slicers, and KPIs for real-time monitoring.</p>
+                        <h3>SN-CORP Sales Performance Dashboard</h3>
+                        <p>Comprehensive sales analytics dashboard analyzing €1.3M in sales across European markets. Features interactive maps, time-series analysis, customer segmentation, and real-time KPI monitoring with 15%+ performance improvement insights.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag powerbi">Power BI</span>
+                            <span class="project-tag excel">Excel</span>
+                            <span class="project-tag sql">SQL</span>
                             <span class="project-tag">DAX</span>
                             <span class="project-tag">Data Visualization</span>
                         </div>
                         <div class="project-links">
                             <a href="https://app.powerbi.com/groups/me/reports/9d76e1b2-6a56-4c61-8acc-9b2865bcd710/8ccd5faad5f6e6ca2801?experience=power-bi" class="project-link">View Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image blinkit">🛒</div>
+                    <div class="project-content">
+                        <h3>BlinkIt E-commerce Analytics Dashboard</h3>
+                        <p>Advanced e-commerce analytics dashboard providing insights into product performance, customer behavior, sales trends, and inventory optimization. Features dynamic filtering, category analysis, and revenue tracking across multiple product segments.</p>
+                        <div class="project-tags">
+                            <span class="project-tag powerbi">Power BI</span>
+                            <span class="project-tag excel">Excel</span>
+                            <span class="project-tag sql">SQL</span>
+                            <span class="project-tag">E-commerce Analytics</span>
+                            <span class="project-tag">KPI Monitoring</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Dashboard</a>
+                            <a href="#" class="project-link">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image zomato">🍽️</div>
+                    <div class="project-content">
+                        <h3>Zomato Delhi NCR Market Analysis</h3>
+                        <p>Comprehensive food delivery market analysis for Delhi NCR region. Includes restaurant performance metrics, cuisine popularity trends, delivery zone optimization, customer ratings analysis, and market penetration insights.</p>
+                        <div class="project-tags">
+                            <span class="project-tag powerbi">Power BI</span>
+                            <span class="project-tag excel">Excel</span>
+                            <span class="project-tag sql">SQL</span>
+                            <span class="project-tag">Geographic Analysis</span>
+                            <span class="project-tag">Market Research</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://app.powerbi.com/groups/me/reports/ca8e8a73-b1e9-4f9b-8239-0ef104d4d653/94efaacb5e8d0a228481?experience=power-bi" class="project-link">View Dashboard</a>
+                            <a href="https://app.powerbi.com/groups/me/insights/9c910f8d-0fee-48a3-8f54-e58575363ab7?insightsSource=Desktop&experience=power-bi" class="project-link">Market Insights</a>
                         </div>
                     </div>
                 </div>
@@ -799,6 +867,7 @@
                             <span class="project-tag">Arduino</span>
                             <span class="project-tag">IoT</span>
                             <span class="project-tag">Sensors</span>
+                            <span class="project-tag">C++</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">Demo Video</a>
@@ -814,6 +883,7 @@
                             <span class="project-tag">Python</span>
                             <span class="project-tag">Machine Learning</span>
                             <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag excel">Excel</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">GitHub</a>
