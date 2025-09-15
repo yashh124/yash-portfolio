@@ -234,6 +234,40 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Resume Download Button */
+        .resume-download {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .download-resume-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            border: 2px solid transparent;
+        }
+
+        .download-resume-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .download-resume-btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -677,6 +711,12 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            /* Resume button mobile adjustments */
+            .resume-download {
+                justify-content: center;
+                margin-top: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -738,6 +778,12 @@
                     <p>Hello! I'm Yash Jain, a results-driven B.Tech Computer Science Engineering student with a passion for data analytics, machine learning, and web development. I specialize in transforming complex data into actionable insights that drive business growth.</p>
                     <p>With expertise in Power BI, Excel, SQL, Python, and PHP, I've demonstrated the ability to deliver impactful projects including interactive dashboards for corporate sales, e-commerce analytics, and food delivery insights. My work has proven to improve business performance by 15%+ through data-driven insights.</p>
                     <p>Currently pursuing my degree at Indus University, Ahmedabad, I'm constantly learning and exploring new technologies to stay at the forefront of the rapidly evolving tech landscape.</p>
+                    
+                    <div class="resume-download">
+                        <a href="https://drive.google.com/file/d/10avlHRMbxPwXUsPrmw3xkFu0dqCWW7Lh/view?usp=drive_link" class="download-resume-btn" download="Yash_Jain_Resume.pdf">
+                            📄 Download Resume
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="stats">
@@ -1034,6 +1080,25 @@
             }, 2000);
         });
 
+        // Enhanced resume download functionality
+        document.querySelector('.download-resume-btn').addEventListener('click', function(e) {
+            // Add visual feedback
+            this.style.transform = 'scale(0.95)';
+            this.innerHTML = '⬇️ Downloading...';
+            
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+                this.innerHTML = '📄 Download Resume';
+            }, 1000);
+            
+            // Note: In a real implementation, you would replace the href with your actual resume file path
+            // For now, this will just provide visual feedback
+            if (this.getAttribute('href') === 'path/to/your-resume.pdf') {
+                e.preventDefault();
+                alert('Please upload your resume file and update the file path in the HTML!');
+            }
+        });
+
         // Navbar background on scroll
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
@@ -1209,4 +1274,3 @@
     </script>
 </body>
 </html>
-
